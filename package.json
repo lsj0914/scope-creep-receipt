@@ -1,0 +1,23 @@
+{
+  "name": "scope-creep-receipt",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Make the cost of 'just one more thing' visible.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "npm test && npm run build && npm run test:e2e"
+  },
+  "engines": { "node": ">=22.12.0" },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@axe-core/playwright": "^4.10.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9",
+    "vitest": "^3.2.4"
+  }
+}
