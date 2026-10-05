@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "title": "Campus workshop launch",
+  "requester": "Project sponsor",
+  "reason": "We want remote students to join the workshop, too.",
+  "settings": {
+    "startDate": "2026-10-05",
+    "deadline": "2026-10-09",
+    "dailyHours": 6,
+    "hourlyRate": 75,
+    "bufferPercent": 0,
+    "currency": "USD"
+  },
+  "baseline": [
+    {
+      "id": "venue",
+      "name": "Confirm venue & budget",
+      "hours": 6,
+      "dependsOn": [],
+      "optional": false
+    },
+    {
+      "id": "program",
+      "name": "Prepare the program",
+      "hours": 12,
+      "dependsOn": ["venue"],
+      "optional": false
+    },
+    {
+      "id": "social",
+      "name": "Create social media pack",
+      "hours": 6,
+      "dependsOn": ["program"],
+      "optional": true
+    },
+    {
+      "id": "ready",
+      "name": "Final readiness check",
+      "hours": 6,
+      "dependsOn": ["social"],
+      "optional": false
+    }
+  ],
+  "changes": [
+    {
+      "id": "livestream",
+      "name": "Set up a livestream",
+      "hours": 6,
+      "dependsOn": ["program"],
+      "optional": false,
+      "blocks": ["social"]
+    }
+  ]
+}

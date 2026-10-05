@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "title": "Pet-care booking launch",
+  "requester": "Project sponsor",
+  "reason": "“Can we just add an export button before launch?”",
+  "settings": {
+    "startDate": "2026-10-05",
+    "deadline": "2026-10-09",
+    "dailyHours": 6,
+    "hourlyRate": 75,
+    "bufferPercent": 0,
+    "currency": "USD"
+  },
+  "baseline": [
+    {
+      "id": "design",
+      "name": "Confirm scope & design",
+      "hours": 12,
+      "dependsOn": [],
+      "optional": false
+    },
+    {
+      "id": "build",
+      "name": "Build the booking page",
+      "hours": 12,
+      "dependsOn": ["design"],
+      "optional": false
+    },
+    {
+      "id": "qa",
+      "name": "Test & hand over",
+      "hours": 6,
+      "dependsOn": ["build"],
+      "optional": false
+    }
+  ],
+  "changes": [
+    {
+      "id": "export",
+      "name": "Add CSV export",
+      "hours": 12,
+      "dependsOn": ["build"],
+      "optional": false,
+      "blocks": ["qa"]
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+export const MAX_PROJECT_BYTES = 256_000;
+
 export interface Task {
   id: string;
   name: string;
@@ -6,7 +8,9 @@ export interface Task {
   optional: boolean;
 }
 
-export interface ChangeTask extends Task { blocks: string[] }
+export interface ChangeTask extends Task {
+  blocks: string[];
+}
 
 export interface Settings {
   startDate: string;
@@ -14,7 +18,7 @@ export interface Settings {
   dailyHours: number;
   hourlyRate: number;
   bufferPercent: number;
-  currency: 'USD' | 'CNY' | 'EUR' | 'GBP';
+  currency: "USD" | "CNY" | "EUR" | "GBP";
 }
 
 export interface Project {
@@ -35,14 +39,27 @@ export interface ScheduledTask extends Task {
   critical: boolean;
 }
 
-export interface Schedule { tasks: ScheduledTask[]; days: number; finishDate: string }
-export interface Deferral { id: string; name: string; finishDate: string; savedDays: number; meetsDeadline: boolean }
+export interface Schedule {
+  tasks: ScheduledTask[];
+  days: number;
+  finishDate: string;
+}
+export interface Deferral {
+  id: string;
+  name: string;
+  finishDate: string;
+  savedDays: number;
+  meetsDeadline: boolean;
+}
 export interface Receipt {
   baseline: Schedule;
   revised: Schedule;
   addedHours: number;
   bufferHours: number;
   totalHours: number;
+  lineCosts: { id: string; cost: number }[];
+  laborCost: number;
+  bufferCost: number;
   cost: number;
   deltaDays: number;
   deadlineSlip: number;
@@ -52,5 +69,10 @@ export interface Receipt {
 }
 
 export class ProjectError extends Error {
-  constructor(public code: string, public detail = '') { super(detail || code); }
+  constructor(
+    public code: string,
+    public detail = "",
+  ) {
+    super(detail || code);
+  }
 }

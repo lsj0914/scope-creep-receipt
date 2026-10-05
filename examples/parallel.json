@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "title": "Weekly operations dashboard",
+  "requester": "Project sponsor",
+  "reason": "A glossary would help new team members understand the report.",
+  "settings": {
+    "startDate": "2026-10-05",
+    "deadline": "2026-10-09",
+    "dailyHours": 6,
+    "hourlyRate": 75,
+    "bufferPercent": 0,
+    "currency": "USD"
+  },
+  "baseline": [
+    {
+      "id": "data",
+      "name": "Prepare source data",
+      "hours": 12,
+      "dependsOn": [],
+      "optional": false
+    },
+    {
+      "id": "report",
+      "name": "Build the report",
+      "hours": 12,
+      "dependsOn": ["data"],
+      "optional": false
+    },
+    {
+      "id": "review",
+      "name": "Stakeholder review",
+      "hours": 6,
+      "dependsOn": ["report"],
+      "optional": false
+    }
+  ],
+  "changes": [
+    {
+      "id": "glossary",
+      "name": "Write a data glossary",
+      "hours": 12,
+      "dependsOn": [],
+      "optional": false,
+      "blocks": []
+    }
+  ]
+}
