@@ -54,5 +54,5 @@ Files: README.md, README.zh-CN.md, LICENSE, docs/methodology.md, docs/demo.png, 
 
 - [x] Document genuine calculated examples, limitations, screenshot and commands.
 - [x] Run fresh npm run check, review full branch, fix material findings with regression tests.
-- [ ] Create public repo lsj0914/scope-creep-receipt, push, configure Pages and inspect successful CI/deployment.
-- [ ] Verify the published URL, interactive results and remote commit match; complete goal only when all evidence exists.
+- [x] Create public repo lsj0914/scope-creep-receipt, push, configure Pages and inspect successful CI/deployment.
+- [x] Verify the published URL, interactive results and remote commit match; complete goal only when all evidence exists.
